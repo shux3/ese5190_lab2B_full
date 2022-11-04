@@ -17,4 +17,6 @@ Next, we set up the signal oscilloscope with the following steps:
 - set the trigeer to falling edge
 - press run/stop button to capture the data and clock data.
 
-off/on/off/on
+Here are two captures we got:
+
+![alt txt](https://github.com/shux3/ese5190_lab2B_full/blob/main/05_i2c_traffic/media/off1.jpg)
