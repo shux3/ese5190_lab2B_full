@@ -17,6 +17,12 @@ Next, we set up the signal oscilloscope with the following steps:
 - set the trigeer to falling edge
 - press run/stop button to capture the data and clock data.
 
-Here are two captures we got:
+Here are two captures we got, we can actually read the data being transferred by reading the data value on each clock falling edge:
 
 ![alt txt](https://github.com/shux3/ese5190_lab2B_full/blob/main/05_i2c_traffic/media/off1.jpg)
+
+As we can see here, the data being transferred here is *0b 0100 0010 0100 1010 0001 1100 1100 0001*, which is a 32-bit data *0x424A1CC1*.
+
+![alt txt](https://github.com/shux3/ese5190_lab2B_full/blob/main/05_i2c_traffic/media/on1.jpg)
+
+As we can see here, the data being transferred here is *0b 0100 0000 0000 1001 1100 1001 0011 0000*, which is a 32-bit data *0x4009C930*
