@@ -16,3 +16,5 @@ Next, we set up the signal oscilloscope with the following steps:
 - ignore data other than D0 to D7
 - set the trigeer to falling edge
 - press run/stop button to capture the data and clock data.
+
+off/on/off/on
