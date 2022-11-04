@@ -31,29 +31,29 @@ int main() {
     addr = (volatile uint32_t *) 0xd0000028;
     *addr = 0x00200000;
 
-    // 39 sio_hw -> gpio_clr = lul << QTPY_BOOT_PIN;
+    // sio_hw -> gpio_clr = lul << QTPY_BOOT_PIN;
     addr = (volatile uint32_t *) 0xd0000018;
     *addr = 0x00200000;
     
-    // 45 gpio_set_dunction
+    // gpio_set_dunction
     // hw_xor_bits()
     addr = (volatile uint32_t *) 0x4001c004;
     tmp = 
     addr = (volatile uint32_t *) ((uint32_t) addr | 0x00001000);
     *addr = (uint32_t) tmp;
 
-    // 68 Zero all fields apart from fsel;
-    // 74 GPIO_FUNC_SIO
+    // Zero all fields apart from fsel;
+    // GPIO_FUNC_SIO
     addr = (volatile uint32_t *) 0x40014054;
     *addr = 0x00000005;
 
     addr = (volatile uint32_t *) 0xd0000004;
     tmp = (uint32_t) *addr;
 
-    // 82 gpio_set_dir(QTPY_BOOT_PIN, GPIO_IN);
+    // gpio_set_dir(QTPY_BOOT_PIN, GPIO_IN);
     neopixel_init();
 
-    // 93
+    // Flashlight status
     Flashlight status;
     status.last_serial_byte =  0x00000000;
     status.button_is_pressed = 0x00000000;
